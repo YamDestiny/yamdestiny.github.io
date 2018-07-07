@@ -109,7 +109,7 @@
 
 
   <meta name="description" content="Apache Dubbo™ is a high-performance, java based, open source RPC framework.">
-<meta name="keywords" content="Java,Distributed system - Microservices - Framework">
+<meta name="keywords" content="Java,Distributed,Microservices,Framework">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dubbo 使用入门">
 <meta property="og:url" content="http://yamdestiny.xyz/2018/06/09/dubbo-tutorial/index.html">
@@ -118,7 +118,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yamdestiny-1254804190.coscd.myqcloud.com/images/dubbo/dubbo-users.png">
 <meta property="og:image" content="http://yamdestiny-1254804190.coscd.myqcloud.com/images/dubbo/dubbo-node.png">
-<meta property="og:updated_time" content="2018-07-07T06:01:48.941Z">
+<meta property="og:updated_time" content="2018-07-07T15:40:28.440Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dubbo 使用入门">
 <meta name="twitter:description" content="Apache Dubbo™ is a high-performance, java based, open source RPC framework.">
@@ -389,7 +389,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-07 14:01:48" itemprop="dateModified" datetime="2018-07-07T14:01:48+08:00">2018-07-07</time>
+                <time title="修改时间：2018-07-07 23:40:28" itemprop="dateModified" datetime="2018-07-07T23:40:28+08:00">2018-07-07</time>
               
             
           </span>
@@ -413,7 +413,14 @@
                   ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生命不息，折腾不止/Java-Java-EE/" itemprop="url" rel="index"><span itemprop="name">Java - Java EE</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生命不息，折腾不止/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生命不息，折腾不止/Java/Java-EE/" itemprop="url" rel="index"><span itemprop="name">Java EE</span></a></span>
 
                 
                 
@@ -526,6 +533,8 @@
 <h3 id="IDE支持"><a href="#IDE支持" class="headerlink" title="IDE支持"></a>IDE支持</h3><h4 id="Intellij-Idea"><a href="#Intellij-Idea" class="headerlink" title="Intellij Idea"></a>Intellij Idea</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn idea:idea</span><br></pre></td></tr></table></figure>
 <p>在Idea中，选中dubbo文件夹导入即可</p>
 <h4 id="Eclipse"><a href="#Eclipse" class="headerlink" title="Eclipse"></a>Eclipse</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn eclipse:eclipse</span><br></pre></td></tr></table></figure>
+<p>配置 Maven 仓库，通过 Preferences -&gt; Java -&gt; Build Path -&gt; Classpath 定义 M2_REPO 的 classpath 变量指向本地的 maven 仓库。</p>
+<p>或使用如下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn eclipse:configure-workspace -Declipse.workspace=/path/to/the/workspace/</span><br></pre></td></tr></table></figure></p>
 <p>在Eclipse中，选中dubbo文件夹导入即可</p>
 <h3 id="安装ZooKeeper"><a href="#安装ZooKeeper" class="headerlink" title="安装ZooKeeper"></a>安装ZooKeeper</h3><h4 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h4><p>在<a href="http://zookeeper.apache.org/" target="_blank" rel="noopener">ZooKeeper官网</a>下载后安装到本地</p>
 <p>安装参考：<a href="http://www.cnblogs.com/yjmyzz/p/4587663.html" target="_blank" rel="noopener">ZooKeeper 笔记(1) 安装部署及hello world</a></p>
@@ -540,7 +549,16 @@
 <p>用IDE运行<code>dubbo-demo-consumer</code>项目下的<code>com.alibaba.dubbo.demo.provider.Provider</code></p>
 <h4 id="Consumer"><a href="#Consumer" class="headerlink" title="Consumer"></a>Consumer</h4><p>修改配置文件<code>dubbo/dubbo-demo/dubbo-demo-consumer/src/main/resources/META-INF/spring/dubbo-demo-consumer.xml</code>，修改内容如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dubbo:registry</span> <span class="attr">address</span>=<span class="string">"zookeeper://127.0.0.1:2181"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>用IDE运行<code>dubbo-demo-provider</code>项目下的<code>com.alibaba.dubbo.demo.consumer.Consumer</code></p>
-<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello, World"></a>Hello, World</h2><h2 id="管理控制台"><a href="#管理控制台" class="headerlink" title="管理控制台"></a>管理控制台</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello, World"></a>Hello, World</h2><p>启动过后就会在两个控制台打印<code>Hello, World</code>。</p>
+<p>Provider:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[23:31:10] Hello world, request from consumer: /192.168.2.10:52128</span><br></pre></td></tr></table></figure></p>
+<p>Consumer:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello world, response from provider: 192.168.2.10:20880</span><br></pre></td></tr></table></figure></p>
+<h2 id="管理控制台"><a href="#管理控制台" class="headerlink" title="管理控制台"></a>管理控制台</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">wget http://apache.etoak.com/tomcat/tomcat-6/v6.0.35/bin/apache-tomcat-6.0.35.tar.gz</span><br><span class="line">tar zxvf apache-tomcat-6.0.35.tar.gz</span><br><span class="line"><span class="built_in">cd</span> apache-tomcat-6.0.35</span><br><span class="line">rm -rf webapps/ROOT</span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/dubbo/dubbo-ops.git /var/tmp/dubbo-ops</span><br><span class="line"><span class="built_in">pushd</span> /var/tmp/dubbo-ops</span><br><span class="line">mvn clean package</span><br><span class="line"><span class="built_in">popd</span></span><br><span class="line"></span><br><span class="line">unzip /var/tmp/dubbo-ops/dubbo-admin/target/dubbo-admin-2.0.0.war -d webapps/ROOT</span><br></pre></td></tr></table></figure>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi webapps/ROOT/WEB-INF/dubbo.properties</span><br><span class="line">dubbo.properties</span><br><span class="line">dubbo.registry.address=zookeeper://127.0.0.1:2181</span><br><span class="line">dubbo.admin.root.password=root</span><br><span class="line">dubbo.admin.guest.password=guest</span><br></pre></td></tr></table></figure>
+<h3 id="启停"><a href="#启停" class="headerlink" title="启停"></a>启停</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./bin/startup.sh</span><br><span class="line">./bin/shutdown.sh</span><br></pre></td></tr></table></figure>
+<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1:8080/</span><br></pre></td></tr></table></figure>
+<p>登陆用户名/密码：<code>root</code>/<code>root</code> or <code>guest</code>/<code>guest</code></p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li><a href="http://dubbo.apache.org/#/docs/user/quick-start.md" target="_blank" rel="noopener">Dubbo官方手册</a></li>
 <li><a href="http://www.infoq.com/cn/news/2017/11/Ali-restart-maintenance-Dubbo" target="_blank" rel="noopener">阿里重启维护Dubbo了</a></li>
 <li><a href="https://www.jianshu.com/p/dc364e21a032" target="_blank" rel="noopener">Dubbo正式进入Apache开源孵化器</a></li>
 <li><a href="https://www.cnblogs.com/ityouknow/p/7864800.html" target="_blank" rel="noopener">阿里Dubbo疯狂更新，关Spring Cloud什么事？</a></li>
@@ -581,7 +599,11 @@
           
             <a href="/tags/Java/" rel="tag"># Java</a>
           
-            <a href="/tags/Distributed-system-Microservices-Framework/" rel="tag"># Distributed system - Microservices - Framework</a>
+            <a href="/tags/Distributed/" rel="tag"># Distributed</a>
+          
+            <a href="/tags/Microservices/" rel="tag"># Microservices</a>
+          
+            <a href="/tags/Framework/" rel="tag"># Framework</a>
           
         </div>
       
@@ -604,8 +626,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/30/dubbo-manual/" rel="prev" title="Dubbo 使用手册">
-                Dubbo 使用手册 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/30/dubbo-use-case/" rel="prev" title="Dubbo 使用实例">
+                Dubbo 使用实例 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -741,9 +763,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -802,9 +822,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -854,7 +872,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dubbo是什么"><span class="nav-number">1.</span> <span class="nav-text">Dubbo是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dubbo发展"><span class="nav-number">2.</span> <span class="nav-text">Dubbo发展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支版本"><span class="nav-number">3.</span> <span class="nav-text">分支版本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dubbox"><span class="nav-number">3.1.</span> <span class="nav-text">Dubbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dubbok"><span class="nav-number">3.2.</span> <span class="nav-text">Dubbok</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JD-Hydra"><span class="nav-number">3.3.</span> <span class="nav-text">JD-Hydra</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dubbo工作原理"><span class="nav-number">4.</span> <span class="nav-text">Dubbo工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行Dubbo-Demo"><span class="nav-number">5.</span> <span class="nav-text">运行Dubbo Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#克隆Dubbo源码"><span class="nav-number">5.1.</span> <span class="nav-text">克隆Dubbo源码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建Maven项目"><span class="nav-number">5.2.</span> <span class="nav-text">构建Maven项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IDE支持"><span class="nav-number">5.3.</span> <span class="nav-text">IDE支持</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Intellij-Idea"><span class="nav-number">5.3.1.</span> <span class="nav-text">Intellij Idea</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Eclipse"><span class="nav-number">5.3.2.</span> <span class="nav-text">Eclipse</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装ZooKeeper"><span class="nav-number">5.4.</span> <span class="nav-text">安装ZooKeeper</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#本地安装"><span class="nav-number">5.4.1.</span> <span class="nav-text">本地安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker安装"><span class="nav-number">5.4.2.</span> <span class="nav-text">Docker安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行Demo"><span class="nav-number">5.5.</span> <span class="nav-text">运行Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Provider"><span class="nav-number">5.5.1.</span> <span class="nav-text">Provider</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Consumer"><span class="nav-number">5.5.2.</span> <span class="nav-text">Consumer</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World"><span class="nav-number">6.</span> <span class="nav-text">Hello, World</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#管理控制台"><span class="nav-number">7.</span> <span class="nav-text">管理控制台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">8.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dubbo是什么"><span class="nav-number">1.</span> <span class="nav-text">Dubbo是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dubbo发展"><span class="nav-number">2.</span> <span class="nav-text">Dubbo发展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支版本"><span class="nav-number">3.</span> <span class="nav-text">分支版本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dubbox"><span class="nav-number">3.1.</span> <span class="nav-text">Dubbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dubbok"><span class="nav-number">3.2.</span> <span class="nav-text">Dubbok</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JD-Hydra"><span class="nav-number">3.3.</span> <span class="nav-text">JD-Hydra</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dubbo工作原理"><span class="nav-number">4.</span> <span class="nav-text">Dubbo工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行Dubbo-Demo"><span class="nav-number">5.</span> <span class="nav-text">运行Dubbo Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#克隆Dubbo源码"><span class="nav-number">5.1.</span> <span class="nav-text">克隆Dubbo源码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建Maven项目"><span class="nav-number">5.2.</span> <span class="nav-text">构建Maven项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IDE支持"><span class="nav-number">5.3.</span> <span class="nav-text">IDE支持</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Intellij-Idea"><span class="nav-number">5.3.1.</span> <span class="nav-text">Intellij Idea</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Eclipse"><span class="nav-number">5.3.2.</span> <span class="nav-text">Eclipse</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装ZooKeeper"><span class="nav-number">5.4.</span> <span class="nav-text">安装ZooKeeper</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#本地安装"><span class="nav-number">5.4.1.</span> <span class="nav-text">本地安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker安装"><span class="nav-number">5.4.2.</span> <span class="nav-text">Docker安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行Demo"><span class="nav-number">5.5.</span> <span class="nav-text">运行Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Provider"><span class="nav-number">5.5.1.</span> <span class="nav-text">Provider</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Consumer"><span class="nav-number">5.5.2.</span> <span class="nav-text">Consumer</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World"><span class="nav-number">6.</span> <span class="nav-text">Hello, World</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#管理控制台"><span class="nav-number">7.</span> <span class="nav-text">管理控制台</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">7.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">7.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启停"><span class="nav-number">7.3.</span> <span class="nav-text">启停</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问"><span class="nav-number">7.4.</span> <span class="nav-text">访问</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">8.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
